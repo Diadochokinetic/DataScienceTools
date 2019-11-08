@@ -15,4 +15,4 @@ sometext
 <a name="numscaler"></a>
 ### 1.1 NumScaler
 
-sometext
+NumScaler is a wrapper for scalers. Some scalers only take numerical input and can't ignore non numerical data. NumScaler identifies numerical data and passes it to a Scaler (default=sklearn.preprocessing.StandardScaler).
