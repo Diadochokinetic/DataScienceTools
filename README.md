@@ -5,5 +5,5 @@ This repository contains some modules I consider useful in Data Science tasks. M
 ## Table of contents
 
 1. preprocessing
-1.1 NumScaler
+1.1. NumScaler
 
