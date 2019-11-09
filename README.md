@@ -6,7 +6,8 @@ This repository contains some modules I consider useful in Data Science tasks. M
 
 1. [ Preprocessing ](#preprocessing) <br>
 1.1 [ NumScaler ](#numscaler) <br>
-1.2 [ Imputer ](#imputer)
+1.2 [ Imputer ](#imputer) <br>
+1.3 [ FeatureConverter ](#featureconverter)
 
 <a name="preprocessing"></a>
 ## 1. Preprocessing
@@ -24,3 +25,9 @@ NumScaler is a wrapper for scalers. Some scalers only take numerical input and c
 ### 1.2 Imputer
 
 Imputes missing values based on 'sklearn.base.TransformerMixin'. Numerics values can be imputed by a given metric (default=np.mean) or by a constant value when passed in manual_values. Non numeric values can be imputed by the most frequent value or by a constant value when passed in manual_values.
+
+
+<a name="featureconverter"></a>
+### 1.3 FeatureConverter
+
+The FeatureConverter helps to integrate common preprocessing steps into sklearn pipelines. Supported preprocessing steps are replacing values, converting to str, int or float, dropping columns or adding flags. Steps will be performed in the following order: create flags, replace values, convert types, drop columns
