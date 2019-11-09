@@ -154,6 +154,11 @@ class FeatureConverter(TransformerMixin):
             
             #convert to int
             if column in self.columns_to_int:
+
+                # float values need to be rounded first
+                if X_transformed[column].dtype in ['float16', 'float32', 'float64']:
+
+                    X_transformed.loc[:,column] = X_transformed[column].apply(lambda x: round(x))
                 
                 X_transformed.loc[:,column] = X_transformed[column].astype(int)
             
