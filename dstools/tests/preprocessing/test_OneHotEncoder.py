@@ -162,7 +162,7 @@ class TestOneHotEncoder(unittest.TestCase):
     def test_binary_encoded_column_3_values(self):
 
         """
-        result should be one binary encoded column
+        result should be three columns
         """
         df = pd.DataFrame({'x2':['a','a','b',np.NaN]})
         df_transformed_correct = pd.DataFrame({'x2_OHE_a':[1,1,0,0], 'x2_OHE_b':[0,0,1,0],'x2_OHE_REST':[0,0,0,1]})
