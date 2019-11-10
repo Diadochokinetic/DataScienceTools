@@ -8,7 +8,7 @@ This repository contains some modules I consider useful in Data Science tasks. M
 1.1 [ NumScaler ](#numscaler) <br>
 1.2 [ Imputer ](#imputer) <br>
 1.3 [ FeatureConverter ](#featureconverter) <br>
-1.3 [ OneHotEncoder ](#onehotencoder)
+1.4 [ OneHotEncoder ](#onehotencoder)
 
 <a name="preprocessing"></a>
 ## 1. Preprocessing
