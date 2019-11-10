@@ -41,7 +41,61 @@ class OneHotEncoder(TransformerMixin):
             
         fit_transform(X, y=None)
             performs fit and transform
+            
+    
+    Examples
+    --------
 
+        1 categorical column
+        >>>df = pd.DataFrame({'x':['a','b','c']})
+        >>>OneHotEncoder().fit_transform(df)
+        x_OHE_a x_OHE_b x_OHE_c
+        1   0   0
+        0   1   0
+        0   0   1
+
+
+        number of top values exceeded
+        >>>df = pd.DataFrame({'x':['a','a','c']})
+        >>>OneHotEncoder(number_of_top_values=1).fit_transform(df)
+        x_OHE_a x_OHE_REST
+        1   0   
+        1   0   
+        0   1           
+
+
+        special columns
+        >>>df = pd.DataFrame({'x':['a','a','c']})
+        >>>OneHotEncoder(number_of_top_values=1, special_columns={'x':2}).fit_transform(df)
+        x_OHE_a x_OHE_c
+        1   0   
+        1   0   
+        0   1    
+
+
+        missing values
+        >>>df = pd.DataFrame({'x':['a','a',np.NaN]})
+        >>>OneHotEncoder(number_of_top_values=2, dropna=False).fit_transform(df)
+        x_OHE_a x_OHE_nan
+        1   0   
+        1   0   
+        0   1   
+        >>>df = pd.DataFrame({'x':['a','a',np.NaN]})
+        >>>OneHotEncoder(number_of_top_values=2, dropna=True).fit_transform(df)
+        x_OHE_a x_OHE_REST
+        1   0   
+        1   0   
+        0   1  
+
+
+        binary compression 
+        >>>df = pd.DataFrame({'x':['a','a','c']})
+        >>>OneHotEncoder(number_of_top_values=2, compress_binary=True).fit_transform(df)
+        x_a/c
+        1      
+        1      
+        0   
+            
     """
 
 
@@ -145,7 +199,7 @@ class OneHotEncoder(TransformerMixin):
 
         """
         execute fit & transform
-        
+
         Parameters
         ----------
         
