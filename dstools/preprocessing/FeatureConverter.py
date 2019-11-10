@@ -133,7 +133,7 @@ class FeatureConverter(TransformerMixin):
         
         X_transformed = X.copy()
         
-        for column in X.columns:
+        for column in X_transformed.columns:
             
             #create flags for all passed values
             if column in self.value_flags.keys():
