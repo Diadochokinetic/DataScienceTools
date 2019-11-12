@@ -8,7 +8,10 @@ This repository contains some modules I consider useful in Data Science tasks. M
 1.1 [ NumScaler ](#numscaler) <br>
 1.2 [ Imputer ](#imputer) <br>
 1.3 [ FeatureConverter ](#featureconverter) <br>
-1.4 [ OneHotEncoder ](#onehotencoder)
+1.4 [ OneHotEncoder ](#onehotencoder) <br>
+
+2. [ Classifier ](#classifier) <br>
+2.1 [ BestGuessClassifier ](#bestguessclassifier) <br>
 
 <a name="preprocessing"></a>
 ## 1. Preprocessing
@@ -35,7 +38,19 @@ The FeatureConverter helps to integrate common preprocessing steps into sklearn 
 
 
 <a name="onehotencoder"></a>
-### 1.3 OneHotEncoder
+### 1.4 OneHotEncoder
 
 This module performs binary encoding on columns containing categorical data.
 It assumes that all non numeric columns contain categorical data. If categorical data is encoded in numeric columns, use dstools.preprocessing.FeatureConverter to convert these values first. The maximum number of encoded values can be given globally or fine tuned for every column. Values that exceed the maximum number of encoded values are aggregated in a REST class. Missing values can be either put in the REST class or be classified as distinct value. Categrocial columns with exactly two values (including missing values) can be encoded into one column to reduce dimensionality.
+
+
+<a name="classifier"></a>
+## 2. Classifier
+
+some text
+
+
+<a name="bestguessclassifier"></a>
+### 2.1 BestGuessClassifier
+
+The BestGuessClassifier creates a constant numeric best guess for a given metric, e.g. mean absolute squared error. This Classifier is for interval scaled numeric dependent variables. Use this classifier for binnend variables, otherwise use dstools.regressors.BestGuessRegressor.
