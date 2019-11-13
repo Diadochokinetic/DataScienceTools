@@ -12,6 +12,7 @@ This repository contains some modules I consider useful in Data Science tasks. M
 
 2. [ Classifier ](#classifier) <br>
 2.1 [ BestGuessClassifier ](#bestguessclassifier) <br>
+2.2 [ BestGuessRegressor ](#bestguessregressor) <br>
 
 <a name="preprocessing"></a>
 ## 1. Preprocessing
@@ -54,3 +55,9 @@ some text
 ### 2.1 BestGuessClassifier
 
 The BestGuessClassifier creates a constant numeric best guess for a given metric, e.g. mean absolute squared error. This Classifier is for interval scaled numeric dependent variables. Use this classifier for binnend variables, otherwise use dstools.regressors.BestGuessRegressor.
+
+
+<a name="bestguessregressor"></a>
+### 2.2 BestGuessRegressor
+
+The BestGuessRegressor creates a constant best guess for a given metric, e.g. mean absolute squared error. This regressor is for interval scaled numeric dependent variables. 
