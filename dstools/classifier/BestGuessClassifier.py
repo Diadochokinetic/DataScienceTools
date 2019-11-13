@@ -114,6 +114,6 @@ class BestGuessClassifier(BaseEstimator):
 
         """
         
-        #for every element in the first column, assign the best_guess and return a Series with constant buest_guess_
+        #create a return a Series with the best guess
         y_predicted = pd.Series(np.full(X.shape[0], self.best_guess_))
         return y_predicted
