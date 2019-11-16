@@ -11,5 +11,6 @@ setup(
                     'numpy>=1.16.2',
                     'pandas>=0.24.2',
                     'scikit-learn>=0.20.3',
+                    'statsmodels>=0.9.0'
                     ]
 )
