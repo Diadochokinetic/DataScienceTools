@@ -3,7 +3,12 @@ from setuptools import setup
 setup(
     name='DataScienceTools',
     version='0.1dev',
-    packages=['dstools','dstools.preprocessing', 'dstools.classifier'],
+    packages=['dstools',
+            'dstools.preprocessing', 
+            'dstools.classifier',
+            'dstools.regressor',
+            'dstools.wrapper'
+            ],
     license='MIT License',
     long_description=open('README.md').read(),
     python_requires='>3.6',
