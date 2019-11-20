@@ -7,7 +7,7 @@ setup(
             'dstools.preprocessing', 
             'dstools.classifier',
             'dstools.regressor',
-            'dstools.wrapper'
+            #'dstools.wrapper'
             ],
     license='MIT License',
     long_description=open('README.md').read(),
