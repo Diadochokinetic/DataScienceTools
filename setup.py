@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='DataScienceTools',
-    version='0.1dev',
+    version='0.1dev1',
     packages=['dstools',
             'dstools.preprocessing', 
             'dstools.classifier',
