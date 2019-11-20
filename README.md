@@ -46,7 +46,7 @@ This module performs binary encoding on columns containing categorical data.
 It assumes that all non numeric columns contain categorical data. If categorical data is encoded in numeric columns, use dstools.preprocessing.FeatureConverter to convert these values first. The maximum number of encoded values can be given globally or fine tuned for every column. Values that exceed the maximum number of encoded values are aggregated in a REST class. Missing values can be either put in the REST class or be classified as distinct value. Categrocial columns with exactly two values (including missing values) can be encoded into one column to reduce dimensionality.
 
 <a name="bucketizer"></a>
-### 1.5 Bucektizer
+### 1.5 Bucketizer
 
 The Bucketizer puts numeric features into bins. The binned feature can either replace the original feature or can be created additionally. You can bin all numeric features, pass a list of the features to be binned or pass prefix of the features to be binned.
 
