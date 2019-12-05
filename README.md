@@ -1,6 +1,10 @@
 # DataScienceTools
 
-This repository contains some modules I consider useful in Data Science tasks. Most of them are based on sklearn and require input data to be in pandas DataFrames or Series.
+This repository contains some modules I consider useful in Data Science tasks. Most of them are based on sklearn and require input data to be in pandas DataFrames or Series. <br>
+
+The package is in an early development state. You can check it out with:
+
+`$ pip install DataScienceTools`
 
 ## Table of contents
 
