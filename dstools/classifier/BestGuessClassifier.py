@@ -8,16 +8,22 @@ class BestGuessClassifier(BaseEstimator):
     
     
     """
-    The BestGuessClassifier creates a constant numeric best guess for a given metric, e.g. mean absolute squared error. This Classifier is for interval scaled numeric dependent variables. Use this classifier for binnend variables, otherwise use dstools.regressors.BestGuessRegressor.
+    The BestGuessClassifier creates a constant numeric best guess for a given
+    metric, e.g. mean absolute squared error. This Classifier is for interval
+    scaled numeric dependent variables. Use this classifier for binnend
+    variables, otherwise use dstools.regressors.BestGuessRegressor.
     
     Parameters
     ----------
     
-    metric: function(y_true, y_predicted), default=sklearn.metrics.mean_absolute_error
-        The best guess ist optmized on the given metric, either minimum or maximum.
+    metric: function(y_true, y_predicted),
+            default=sklearn.metrics.mean_absolute_error
+        The best guess ist optmized on the given metric, either minimum or
+        maximum.
         
     argmin: bool, default=True
-        The given metric is either optimized on argmin or argmax. Argmin for True and argmax for False.
+        The given metric is either optimized on argmin or argmax. Argmin for
+        True and argmax for False.
 
 
     Functions
